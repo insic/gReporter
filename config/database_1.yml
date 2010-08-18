@@ -1,0 +1,16 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  database: greportr_development
+  username: root
+  password: r00t
+  pool: 5
+
+test:
+  adapter: mysql
+  encoding: utf8
+  database: greportr_development
+  username: root
+  password: r00t
+  pool: 5
+

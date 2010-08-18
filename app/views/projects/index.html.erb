@@ -1,0 +1,16 @@
+<h2>Projects</h2>
+
+<% @projects.each do |project| %>
+<h3><%=h project.name %></h3>
+    <p><%=h project.description %></p>
+
+    <p><%= link_to 'Show', project %>
+    <%= link_to 'Edit', edit_project_path(project) if permitted_to? :edit, project %>
+   <%= link_to 'Destroy',  project, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, project  %></p>
+    <hr />
+
+<% end %>
+
+<br />
+
+<%= link_to 'New project', new_project_path %>
